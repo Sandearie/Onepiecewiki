@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { FruitItem } from "@/interface/Item";
 import { FruitDetailService } from "@/services/fruitDetail";
 import ReactLoading from "react-loading";
-
+import logo from "/images/logoophead.png"
+import redheart from "/images/RedHeart.png"
+import blackheart from "/images/BlackHeart.png"
 
 const DetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -87,13 +89,13 @@ const DetailPage = () => {
         {fruit.filename === "https://images.api-onepiece.com/fruits/" ? (
               <img
                 className=" max-h-[50px] object-contain"
-                src="/images/logoophead.png"
+                src={logo}
                 alt="Default Logo"
               />
               ) : (
               <img
                 className="max-h-[50px] object-contain"
-                src={fruit.filename || "/images/logoophead.png"}  //ถ้าfruit.filenameไม่มีค่า เป็น false จะคืนค่าตัวหลังสุดทันที || ถ้าทุกค่าเป็น false จะส่งคืนค่าตัวสุดท้าย
+                src={fruit.filename || logo}  
                 alt={fruit.name || "Fruit"}
               />
               )}
@@ -142,7 +144,7 @@ const DetailPage = () => {
               )}
               <div className="absolute bottom-0 right-0  p-1 cursor-pointer" onClick={updateFavorite}>
                 <img
-                  src={isFavorite ? "/images/RedHeart.png" : "/images/BlackHeart.png"}
+                  src={isFavorite ? redheart : blackheart}
                   alt="Heart"
                   className="w-[40px] h-[40px]"
                 />

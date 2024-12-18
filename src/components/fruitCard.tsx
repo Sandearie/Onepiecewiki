@@ -1,8 +1,9 @@
 import { FruitItem } from "@/interface/Item";
 import { useState } from "react";
 import { Link } from "react-router";
-
-
+import blackheart from "/images/BlackHeart.png";
+import redheart from "/images/RedHeart.png";
+import logo from "/images/logoophead.png";
 
 interface FruitCardProps {
     fruit: FruitItem,
@@ -48,7 +49,7 @@ const FruitCard = (props:FruitCardProps) => {
               {fruit.filename === "https://images.api-onepiece.com/fruits/" ? (
               <img
                 className="max-w-full max-h-full object-contain"
-                src="/images/logoophead.png"
+                src={logo}
                 alt="Default Logo"
               />
               ) : (
@@ -60,7 +61,7 @@ const FruitCard = (props:FruitCardProps) => {
               )}
               <div className="absolute bottom-0 right-0  p-1 cursor-pointer" onClick={updateFavorite}>
                 <img
-                  src={isFav ? "/images/RedHeart.png" : "/images/BlackHeart.png"}
+                  src={isFav ? redheart : blackheart}
                   alt="Heart"
                   className="w-[30px] h-[30px]"
                 />

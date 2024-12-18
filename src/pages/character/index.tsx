@@ -4,6 +4,7 @@ import { CharacterItem } from "@/interface/Item";
 import { Link } from "react-router";
 import ReactLoading from "react-loading";
 import CharacterCard from "@/components/characterCard";
+import logo from "/images/fruitlogo.png"
 
 const CharacterPage = () => {
   
@@ -59,7 +60,7 @@ const CharacterPage = () => {
         <div className="center-page flex-col justify-center w-[90%] m-[auto] max-w-[1400px]">
             <div id="navbarfruitpage" className="fixed w-[90%] rounded-lg z-10 flex justify-center min-w-[270px]  bg-[#020617] shadow-md lg:flex-wrap lg:justify-start lg:py-1 mt-2 shadow-lg shadow-cyan-500/50">
             <div className="flex w-full items-center py-3 px-5 gap-3">
-                <img className="max-h-[50px]" src="/images/fruitlogo.png" alt="" />
+                <img className="max-h-[50px]" src={logo} alt="" />
                 <label className="text-3xl font-medium w-[300px] text-left">CHARACTERS</label>
           
                 <div  className="flex items-center justify-end w-full">
