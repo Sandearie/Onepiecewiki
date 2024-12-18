@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './index.css'
+import logo from "/images/OPLogo.png"
 
 const HomePage = () => {
 
@@ -13,7 +14,7 @@ const HomePage = () => {
             
 
             <div className='flex flex-col justify-center items-center'>
-                <img src='/images/OPLogo.png' alt='logo' className='max-w-[50%] mt-[20px]'/>
+                <img src={logo} alt='logo' className='max-w-[50%] mt-[20px]'/>
                 <div className='mt-[60px]'>
                     <iframe 
                     width="560" height="315" 
