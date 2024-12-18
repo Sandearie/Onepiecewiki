@@ -1,0 +1,43 @@
+.ContainerMenu{
+    width: 90%;
+    margin: auto;
+    max-width: 1100px;
+    background-color: red;
+}
+
+.oplogo {
+    display: flex;
+    justify-content: center;  
+    align-items: flex-start;  
+    background-color: yellow;      
+  }
+
+.oplogo img {
+    max-height: 200px;
+    margin-top: 20px;      
+}
+
+.nav-character {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-image {
+    animation: slide 10s linear infinite;
+  }
+  
+  .nav-character:hover .animated-image {
+    animation-play-state: running;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
