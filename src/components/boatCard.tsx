@@ -9,7 +9,7 @@ interface CharacterCardProps {
 const BoatCard = (props:CharacterCardProps) => {
     const {boat} = props
     const [isFlipped, setIsFlipped] = useState(false);
-
+    
     const flipedCard = () => {
         setIsFlipped((isFlipped) => !isFlipped);
       };
