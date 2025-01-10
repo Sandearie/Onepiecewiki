@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import blackheart from "/images/BlackHeart.png";
 import redheart from "/images/RedHeart.png";
 import logo from "/images/logoophead.png";
+import nonPhoto from "/images/Photo-coming-soon.png";
 
 interface FruitCardProps {
     fruit: FruitItem,
@@ -36,15 +37,13 @@ const FruitCard = (props:FruitCardProps) => {
     
 
     return (
-      // การ์ดทั้งหมด
-      <div className="">
+      
+      <div className="card">
         <Link to={`/fruit/${fruit.id}`}>
         
         <div className="bg-[url('/images/worldmapbg.jpg')] bg-cover bg-center bg-fixed  w-[full]  border-0 hover:scale-105 border-gray-200 rounded-lg shadow hover:">
           <div className="w-[95%] flex flex-col justify-center items-center">
             <div className="flex  items-center p-[50px] " > 
-
-            
             <div className="relative w-[100px] h-[100px] flex items-center justify-center  rounded-md">
               {fruit.filename === "https://images.api-onepiece.com/fruits/" ? (
               <img
@@ -55,7 +54,7 @@ const FruitCard = (props:FruitCardProps) => {
               ) : (
               <img
                 className="max-w-full max-h-full object-contain"
-                src={fruit.filename || "/images/logoophead.png"}  //ถ้าfruit.filenameไม่มีค่า เป็น false จะคืนค่าตัวหลังสุดทันที || ถ้าทุกค่าเป็น false จะส่งคืนค่าตัวสุดท้าย
+                src={fruit.filename || nonPhoto}
                 alt={fruit.name || "Fruit"}
               />
               )}
@@ -73,7 +72,7 @@ const FruitCard = (props:FruitCardProps) => {
           </div>
 
 
-          {/* ล่าง */}
+          
           <div className="max-w-[210px] flex justify-center">
             <div className="w-[180px] h-[100px]" > 
               <div className="max-w-full max-h-full mt-2 text-center font-medium text-white text-xl">{fruit.name}</div>
@@ -85,7 +84,7 @@ const FruitCard = (props:FruitCardProps) => {
 
 
           </div>
-          {/* บน */}
+          
           
           
 
