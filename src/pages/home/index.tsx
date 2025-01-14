@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './index.css'
 import logo from "/images/OPLogo.png"
+import videobg from "/videos/videobg.mp4"
 
 const HomePage = () => {
 
@@ -10,22 +11,38 @@ const HomePage = () => {
                 <div className='Nav-home'></div>
 
         </div>
+
+        <div className='bg-[black] w-[100%] h-screen relative'>
+      
+            <video
+                autoPlay
+                loop
+                muted
+                className='absolute top-0 left-0 w-full h-full object-cover z-0'
+            >
+            <source src={videobg} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+      <div className='sticky top-[35%] z-10 flex justify-center items-center '>
+        <img src={logo} alt='logo' className='max-w-[50%] mt-[20px]' />
+      </div>
+      </div>
+
+
         <div className='w-[90%] m-[auto] max-w-[1400px] pb-[500px] text-5xl'>
             
-
             <div className='flex flex-col justify-center items-center'>
                 <img src={logo} alt='logo' className='max-w-[50%] mt-[20px]'/>
-                <div className='mt-[60px]'>
-                    <iframe 
-                    width="560" height="315" 
-                    src="https://www.youtube.com/embed/5UNBl3Bmsuk?si=AK97nYUjq3dvrAQS" 
-                    title="YouTube video player" 
-                    className="autoplay" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; mute"  > 
-                    </iframe>
-                    {/* <div>Watch on 
-                        <button className='w-50 h-50'>Netflix</button> </div> */}
-                </div>
+                
+
+
+
+
+
+
+
+                
+                
             </div>
 
 
