@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './index.css'
 import logo from "/images/OPLogo.png"
 import videobg from "/videos/videobg.mp4"
+import icon from "/images/logoophead.png"
 import { useEffect, useRef, useState } from 'react'
 
 const HomePage = () => {
@@ -59,14 +60,23 @@ const HomePage = () => {
                 </div>
             </div>
             <div 
-                id='nav-bar' 
-                className='bg-[black] sticky top-0 w-[100%] h-[60px] transition-all duration-500'
+                id='navbar' 
+                className='bg-[black] sticky top-0 w-[100%] h-[80px] transition-all duration-500 flex items-center justify-center'
                 style={{
-                    opacity: navBarOpacity,  // ปรับ opacity ของ nav-bar ตาม scroll
+                    opacity: navBarOpacity,  
                     transition: 'opacity 0.7s ease',
                 }}
             >
-                <div className='Nav-icon'></div>
+                <div id='nav-content' className='flex justify-center items-center gap-4 '>
+                    <div className='Nav-icon flex items-center justify-center w-[50px] h-[50px]'>
+                        <img src={icon} alt="icon-navbar" className='max-w-full max-h-full object-contain' />
+                    </div>
+                    <label className='text-2xl font-serif'>Welcome to One Piece Wiki</label>
+                    <div className='Nav-icon flex items-center justify-center w-[50px] h-[50px]'>
+                        <img src={icon} alt="icon-navbar" className='max-w-full max-h-full object-contain' />
+                    </div>
+                </div>
+                
             </div>
             <div className='w-[90%] m-[auto] max-w-[1400px] pb-[500px] text-5xl'>
                 <div className='flex justify-center mt-[60px] ' id="fruits">
