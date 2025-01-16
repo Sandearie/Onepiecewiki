@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const HomePage = () => {
     const [logoOffset, setLogoOffset] = useState(0);
+    const [navBarOpacity, setNavBarOpacity] = useState(0);
     const videoRef = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
@@ -18,6 +19,8 @@ const HomePage = () => {
                 const offset = Math.min(scrollPosition / 2, 150);
                 setLogoOffset(offset);
               }
+              const navOpacity = Math.min(scrollPosition / 450, 1);  
+              setNavBarOpacity(navOpacity);
             }
           };
         window.addEventListener("scroll", handleScroll);
@@ -55,7 +58,14 @@ const HomePage = () => {
                     <img src={logo} alt='logo' className='max-w-[50%] mt-[20px]' />
                 </div>
             </div>
-            <div id='nav-bar' className='bg-[black] sticky w-[100%] h-[60px]'>
+            <div 
+                id='nav-bar' 
+                className='bg-[black] sticky top-0 w-[100%] h-[60px] transition-all duration-500'
+                style={{
+                    opacity: navBarOpacity,  // ปรับ opacity ของ nav-bar ตาม scroll
+                    transition: 'opacity 0.7s ease',
+                }}
+            >
                 <div className='Nav-icon'></div>
             </div>
             <div className='w-[90%] m-[auto] max-w-[1400px] pb-[500px] text-5xl'>
