@@ -57,7 +57,7 @@ const BoatPage = () => {
           <div className="flex w-full items-center py-3 px-5 gap-3">
             <img className="max-h-[50px]" src={logo} alt="" />
             <label className="text-3xl font-medium w-[300px] text-left">
-              BOATS
+              SHIPS
             </label>
 
             <div className="flex items-center justify-end w-full">
@@ -92,7 +92,7 @@ const BoatPage = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-3xl font-bold pt-[125px] text-[black]">Boats</h1>
+      <h1 className="text-3xl font-bold pt-[125px] text-[black]"></h1>
 
       <div className="flex justify-center">
         {loading ? (
