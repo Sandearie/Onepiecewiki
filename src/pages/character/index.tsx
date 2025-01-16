@@ -7,13 +7,11 @@ import CharacterCard from "@/components/characterCard";
 import logo from "/images/fruitlogo.png"
 
 const CharacterPage = () => {
-  
   const [characters, setCharacters] = useState<CharacterItem[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchField, setSearchField] = useState("name"); // ค่าเริ่มต้น field ที่ค้นหา (เช่น name)
   const [loading, setLoading] = useState(false);
   
-
   const callDataAll = async () => {
     setLoading(true);
 
@@ -62,10 +60,7 @@ const CharacterPage = () => {
             <div className="flex w-full items-center py-3 px-5 gap-3">
                 <img className="max-h-[50px]" src={logo} alt="" />
                 <label className="text-3xl font-medium w-[300px] text-left">CHARACTERS</label>
-          
                 <div  className="flex items-center justify-end w-full">
-        
-                
                     <select
                         value={searchField}
                         onChange={(e) => setSearchField(e.target.value)}
@@ -92,32 +87,18 @@ const CharacterPage = () => {
                     >
                         Search
                     </button>
-      
-
                     <div>
-                        
-
                         <Link to="/">
                             <button >Home</button> 
                         </Link>
                     </div>
-          
-        
                 </div>
             </div>
-        
-        
             </div>
-
-
-
-
-
         </div>
-      <h1 className="text-3xl font-bold pt-[125px] text-[black]">One Piece Characters</h1>
+      <h1 className="pt-[90px]"></h1>
 
-      
-      
+
       <div className="flex justify-center">
         {loading ? (
           <div className='h-[500px] flex items-center'>
@@ -131,32 +112,8 @@ const CharacterPage = () => {
                 <p>No characters found.</p>
               )}
             </div>
-            )}
-          
-          
-        
-        
-      </div>
-      
-
-      
-      {/* <div className="character-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {characters.length > 0 ? (
-          characters.map((character) => (
-            <div
-              key={character.id}
-              className="character-card border p-4 rounded shadow bg-[#E5E7EB] bg-opacity-25"
-            >
-              <h2 className="text-xl font-bold">{character.name}</h2>
-              <p>Job: {character.job}</p>
-              <p>Bounty: {character.bounty}</p>
-              <p>Age: {character.age}</p>
-            </div>
-          ))
-        ) : (
-          <p>No characters found.</p>
         )}
-      </div> */}
+      </div>
     </div>
   );
 };

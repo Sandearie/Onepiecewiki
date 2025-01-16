@@ -17,7 +17,7 @@ const CharacterCard = (props:CharacterCardProps) => {
     return  (
         <div
           key={character.id}
-          onClick={flipedCard} // คลิกเพื่อพลิกการ์ด
+          onClick={flipedCard} 
           className={`character-card group relative w-full h-[300px] perspective cursor-pointer`}
         >
           
@@ -49,7 +49,7 @@ const CharacterCard = (props:CharacterCardProps) => {
                     ) : (
                     <img
                       className="max-w-full max-h-full object-contain"
-                      src={character.fruit.filename || "/images/logoophead.png"}  //ถ้าfruit.filenameไม่มีค่า เป็น false จะคืนค่าตัวหลังสุดทันที || ถ้าทุกค่าเป็น false จะส่งคืนค่าตัวสุดท้าย
+                      src={character.fruit.filename || "/images/logoophead.png"} 
                       alt={character.fruit.filename || "Fruit"}
                     />
                     )) 
