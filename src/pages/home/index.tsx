@@ -4,6 +4,7 @@ import logo from "/images/OPLogo.png"
 import videobg from "/videos/videobg.mp4"
 import icon from "/images/logoophead.png"
 import { useEffect, useRef, useState } from 'react'
+import bgfruit from "/images/bgfruit.png"
 
 const HomePage = () => {
     const [logoOffset, setLogoOffset] = useState(0);
@@ -33,13 +34,11 @@ const HomePage = () => {
     return (
         <div className='relative  w-full'>
             
-
             <div 
                 id="video-container" 
                 ref={videoRef}
                 className='bg-[black]  h-screen relative'
             >
-        
                 <video
                     autoPlay
                     loop
@@ -78,12 +77,21 @@ const HomePage = () => {
                 </div>
                 
             </div>
-            <div className='w-[90%] m-[auto] max-w-[1400px] pb-[500px] text-5xl'>
+            <div className='w-[90%] m-[auto] max-w-[1400px] pb-[150px] text-5xl'>
                 <div className='flex justify-center mt-[60px] ' id="fruits">
                     
                     <Link to="/fruits">
-                    <div className='nav-fruits bg-[white] bg-opacity-50 cursor-pointer  bg-cover bg-center  w-[950px] h-[200px] flex justify-center items-center'>
-                    <label className='cursor-pointer'>Fruit</label>
+                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[900px] h-[300px] group overflow-hidden flex justify-center items-center">
+                    <div
+                        className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
+                        style={{
+                        backgroundImage: `url(${bgfruit})`,
+                        }}
+                    >
+                    </div>
+                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                        FRUIT
+                    </label>
                     </div>
                     
                     </Link>
@@ -93,29 +101,39 @@ const HomePage = () => {
                 <div className='flex justify-center mt-[40px]' id="character" >
                     
                     <Link to="/character">
-                    <div className='nav-character bg-[white] bg-opacity-50 cursor-pointer bg-cover bg-center  w-[950px] h-[200px] flex justify-center items-center'>
-                    <label className='cursor-pointer'>Character</label> 
-                    
-                    
+                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[900px] h-[300px] group overflow-hidden flex justify-center items-center">
+                    <div
+                        className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
+                        style={{
+                        backgroundImage: `url(${bgfruit})`,
+                        }}
+                    >
+                    </div>
+                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                        CHARACTER
+                    </label>
                     </div>
                     </Link>
                 </div>
 
                 <div className='flex justify-center mt-[40px]' id="Ship">
                     <Link to="/boat">
-                    <div className='bg-[white] bg-opacity-50 cursor-pointer bg-cover bg-center w-[950px] h-[200px] flex justify-center items-center'>
-                    <label className='cursor-pointer'>Ship</label>
+                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[900px] h-[300px] group overflow-hidden flex justify-center items-center">
+                    <div
+                        className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
+                        style={{
+                        backgroundImage: `url(${bgfruit})`,
+                        }}
+                    >
+                    </div>
+                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                        SHIP
+                    </label>
                     </div>
                     </Link>
                 </div>
 
-                {/* <div className='flex justify-center mt-[25px]' id="Ship">
-                    <Link to="/location">
-                    <div className='bg-gradient-to-r from-purple-500 to-pink-500 w-[778.75px] h-[125px]'>
-                    <label>Location</label>
-                    </div>
-                    </Link>
-                </div> */}
+                
                 
             </div>
         </div>
