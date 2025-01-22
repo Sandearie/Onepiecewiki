@@ -5,6 +5,8 @@ import videobg from "/videos/videobg.mp4"
 import icon from "/images/logoophead.png"
 import { useEffect, useRef, useState } from 'react'
 import bgfruit from "/images/bgfruit.png"
+import bgcharacter from "/images/bgcharacter.png"
+import bgship from "/images/bgshipsunny.png"
 
 const HomePage = () => {
     const [logoOffset, setLogoOffset] = useState(0);
@@ -105,7 +107,7 @@ const HomePage = () => {
                     <div
                         className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
                         style={{
-                        backgroundImage: `url(${bgfruit})`,
+                        backgroundImage: `url(${bgcharacter})`,
                         }}
                     >
                     </div>
@@ -122,7 +124,7 @@ const HomePage = () => {
                     <div
                         className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
                         style={{
-                        backgroundImage: `url(${bgfruit})`,
+                        backgroundImage: `url(${bgship})`,
                         }}
                     >
                     </div>
