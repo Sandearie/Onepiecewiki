@@ -91,7 +91,7 @@ const HomePage = () => {
                         }}
                     >
                     </div>
-                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500 cursor-pointer">
                         FRUIT DEVIL
                     </label>
                     </div>
@@ -111,7 +111,7 @@ const HomePage = () => {
                         }}
                     >
                     </div>
-                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500 cursor-pointer">
                         CHARACTER
                     </label>
                     </div>
@@ -128,7 +128,7 @@ const HomePage = () => {
                         }}
                     >
                     </div>
-                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500 cursor-pointer">
                         SHIP
                     </label>
                     </div>
