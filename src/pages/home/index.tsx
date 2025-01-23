@@ -61,14 +61,14 @@ const HomePage = () => {
                 </div>
             </div>
             <div 
-                id='navbar' 
-                className='bg-[black] sticky top-0 w-[100%] h-[80px] transition-all duration-500 flex items-center justify-center'
+                id='welcomebar' 
+                className='bg-[black] sticky top-0 w-[100%] h-[80px] transition-all duration-500 flex items-center justify-center z-50'
                 style={{
                     opacity: navBarOpacity,  
                     transition: 'opacity 0.7s ease',
                 }}
             >
-                <div id='nav-content' className='flex justify-center items-center gap-4 '>
+                <div className='flex justify-center items-center gap-4 '>
                     <div className='Nav-icon flex items-center justify-center w-[50px] h-[50px]'>
                         <img src={icon} alt="icon-navbar" className='max-w-full max-h-full object-contain' />
                     </div>
@@ -79,7 +79,7 @@ const HomePage = () => {
                 </div>
                 
             </div>
-            <div className='w-[90%] m-[auto] max-w-[1400px] pb-[150px] text-5xl'>
+            <div className='w-[90%] m-[auto] max-w-[1400px] pb-[150px] text-5xl '>
                 <div className='flex justify-center mt-[60px] ' id="fruits">
                     
                     <Link to="/fruits">
@@ -92,7 +92,7 @@ const HomePage = () => {
                     >
                     </div>
                     <label className="label-text relative z-20 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-                        FRUIT
+                        FRUIT DEVIL
                     </label>
                     </div>
                     
