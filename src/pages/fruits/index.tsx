@@ -96,7 +96,7 @@ const FruitsPage = () => {
           </div>
           
         ) : (
-          <div className="py-[100px] pt-[125px] p-[1%]  w-[80%] justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14   min-h-screen">
+          <div className="py-[100px] pt-[125px] p-[1%]  w-[85%] justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10   min-h-screen">
             {fruits.map((f) => <FruitCard fruit={f} updateFav={updateFavList} />)}
           </div>
             
