@@ -1,6 +1,8 @@
 import { CharacterItem } from "@/interface/Item"
 import { useState } from "react";
 import "./charactercard.css"
+import comingSoonPhoto from "/images/Photo-coming-soon.png"
+import logohead from "/images/logoophead.png"
 
 interface CharacterCardProps {
     character: CharacterItem,
@@ -43,20 +45,20 @@ const CharacterCard = (props:CharacterCardProps) => {
                 character.fruit.filename === "https://images.api-onepiece.com/fruits/" ? (
                     <img
                       className="max-w-full max-h-full object-contain"
-                      src="/images/logoophead.png"
-                      alt="Default Logo"
+                      src={comingSoonPhoto}
+                      alt="coming soon Logo"
                     />
                     ) : (
                     <img
                       className="max-w-full max-h-full object-contain"
-                      src={character.fruit.filename || "/images/logoophead.png"} 
+                      src={character.fruit.filename || comingSoonPhoto} 
                       alt={character.fruit.filename || "Fruit"}
                     />
                     )) 
             : (
                 <img
                 className="h-[200px] w-auto object-contain rounded"
-                src="/images/logoophead.png"
+                src={logohead}
                 alt="Default Logo"
               />
 
