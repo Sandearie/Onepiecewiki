@@ -34,7 +34,7 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div className='relative  w-full'>
+        <div className='relative w-full overflow-x-hidden'>
             
             <div 
                 id="video-container" 
@@ -79,11 +79,11 @@ const HomePage = () => {
                 </div>
                 
             </div>
-            <div className='w-[90%] m-[auto] max-w-[1400px] pb-[150px] text-5xl '>
+            <div className='w-[90%] m-[auto] pb-[150px] text-5xl '>
                 <div className='flex justify-center mt-[60px] ' id="fruits">
                     
                     <Link to="/fruits">
-                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[900px] h-[300px] group overflow-hidden flex justify-center items-center">
+                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[400px] sm:w-[450px] md:w-[550px] lg:w-[700px] xl:w-[900px] h-[200px] sm:h-[260px] md:h-[270px] lg:h-[285px] xl:h-[300px] group overflow-hidden flex justify-center items-center">
                     <div
                         className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
                         style={{
@@ -103,7 +103,7 @@ const HomePage = () => {
                 <div className='flex justify-center mt-[40px]' id="character" >
                     
                     <Link to="/character">
-                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[900px] h-[300px] group overflow-hidden flex justify-center items-center">
+                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[400px] sm:w-[450px] md:w-[550px] lg:w-[700px] xl:w-[900px] h-[200px] sm:h-[260px] md:h-[270px] lg:h-[285px] xl:h-[300px] group overflow-hidden flex justify-center items-center">
                     <div
                         className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
                         style={{
@@ -120,7 +120,7 @@ const HomePage = () => {
 
                 <div className='flex justify-center mt-[40px]' id="Ship">
                     <Link to="/boat">
-                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[900px] h-[300px] group overflow-hidden flex justify-center items-center">
+                    <div className="nav-fruits bg-[white] bg-opacity-50 relative w-[400px] sm:w-[450px] md:w-[550px] lg:w-[700px] xl:w-[900px] h-[200px] sm:h-[260px] md:h-[270px] lg:h-[285px] xl:h-[300px] group overflow-hidden flex justify-center items-center">
                     <div
                         className="background-overlay absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500 group-hover:opacity-100 flex justify-center items-center"
                         style={{
