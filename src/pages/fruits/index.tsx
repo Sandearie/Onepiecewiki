@@ -1,7 +1,5 @@
 import { FruitItem } from "@/interface/Item";
-
 import { useEffect, useState } from "react";
-
 import { FruitDetailService } from "@/services/fruitDetail";
 import FruitCard from "@/components/fruitCard";
 import ReactLoading from "react-loading";
@@ -39,8 +37,6 @@ const FruitsPage = () => {
 
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // callData(inputVal);
-    // filter data...
     const lowerInput = inputVal.toLowerCase()
     const fruits = originalFruits.filter((fruit)=>fruit.name.toLowerCase().includes(lowerInput));
     setFruits(fruits);
@@ -59,7 +55,10 @@ const FruitsPage = () => {
 
   return (
     <div className="flex-col justify-center w-[90%] m-[auto] max-w-[1400px] pb-[500px]">
-      <div id="navbarfruitpage" className="fixed w-[90%] rounded-lg z-10 flex justify-center min-w-[270px]  bg-[#020617] shadow-md lg:flex-wrap lg:justify-start lg:py-1 mt-2 shadow-lg shadow-cyan-500/50">
+      <div 
+        id="navbarfruitpage" 
+        className="fixed w-[90%] rounded-lg z-10 flex justify-center min-w-[270px]  bg-[#020617] shadow-md lg:flex-wrap lg:justify-start lg:py-1 mt-2 shadow-lg shadow-cyan-500/50"
+      >
         <div className="flex w-full items-center py-3 px-5 gap-3">
           <img className="max-h-[50px]" src={logo} alt="" />
           <label className="text-3xl font-medium w-[300px] text-left">DEVIL FRUITS</label>
